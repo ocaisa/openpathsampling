@@ -362,7 +362,7 @@ class DoubleWell(PES):
         float
             the potential energy
         """
-        dx2 = sys.positions**2 - self.x0**2
+        dx2 = sys.positions * sys.positions - self.x0 * self.x0
         return np.dot(self.A, dx2 * dx2)
 
     def dVdx(self, sys):
@@ -378,5 +378,5 @@ class DoubleWell(PES):
         np.array
             the derivatives of the potential at this point
         """
-        dx2 = sys.positions**2 - self.x0**2
+        dx2 = sys.positions * sys.positions - self.x0 * self.x0
         return 4 * self.A * sys.positions * dx2
