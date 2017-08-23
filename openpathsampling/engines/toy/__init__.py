@@ -1,4 +1,5 @@
-from .integrators import (LangevinBAOABIntegrator, LeapfrogVerletIntegrator)
+from .integrators import (LangevinBAOABIntegrator, \
+    OverdampedLangevinIntegrator, LeapfrogVerletIntegrator)
 from .pes import Gaussian, HarmonicOscillator, LinearSlope, OuterWalls, \
     DoubleWell, PES_Add, PES_Combination, PES_Sub, PES
 
